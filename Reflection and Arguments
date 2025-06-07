@@ -1,0 +1,17 @@
+1. What is the problem that most people face related to lung cancer diagnosis?
+-> The biggest challenge is late diagnosis. Lung cancer symptoms often appear only in advanced stages, making treatment more difficult and reducing survival chances. Limited access to early screening, high medical costs, and lack of awareness also delay diagnosis in many patients.
+2. Why should we build a machine learning model to predict lung cancer?
+-> A machine learning model can help detect lung cancer earlier by finding hidden patterns in patient data that may not be obvious through traditional methods. This improves the chances of early treatment and survival. ML models also allow fast, consistent, and cost-effective screening, which can support doctors in making more accurate decisions. In our case, we experimented with multiple models (Random Forest, XGBoost, and Logistic Regression) and found that Logistic Regression performed the best, providing a good balance between accuracy, interpretability, and simplicity.
+3. How can we predict lung cancer efficiently using available data?
+-> We can predict lung cancer efficiently by using machine learning algorithms trained on structured data such as patient demographics, medical history, and lifestyle factors (e.g., smoking). Here's how:
+
+. Data Preprocessing: Clean and normalize the dataset, handle missing values, and encode categorical features.
+
+. Model Selection: Train several models like Logistic Regression, Random Forest, and XGBoost.
+
+. Evaluation: Use metrics like accuracy, precision, recall, F1-score, and ROC-AUC to compare performance.
+
+. Best Model: In our experiments, Logistic Regression gave the best performance, likely because the relationships in the data were linearly separable or interpretable.
+
+. Deployment: The final model can be deployed as part of a decision-support system for healthcare providers.
+
