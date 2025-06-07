@@ -52,3 +52,5 @@ The project followed a standard machine learning pipeline with careful attention
   . max_depth: experimented manually for best performance
   . random_state: 42 for reproducibility
 
+8. Save the best model for future use for new data
+9. Inference
