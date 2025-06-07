@@ -1,0 +1,3 @@
+Logistic Regression: Selected as the final model for deployment. 
+It achieved 92% accuracy and showed strong generalization on the test set. 
+Its simplicity, interpretability, and robustness to overfitting make it suitable for real-world deployment, especially in healthcare contexts where explainability matters.
