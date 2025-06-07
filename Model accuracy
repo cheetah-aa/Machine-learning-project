@@ -1,0 +1,30 @@
+Logistic Regression: (The one i chose)
+
+Accuracy: 0.92 (92%)
+Precision: 
+No (0): 88%
+Yes (1): 96%
+Recall: 
+No (0): 96%
+Yes (1): 88%
+F1-Score: 
+No (0): 92%
+Yes (1): 92%
+Logistic Regression
+log_reg = LogisticRegression()
+log_reg.fit(X_train, y_train)
+log_reg_accuracy =evaluate_model(log_reg, X_test, y_test, 'Logistic Regression')
+log_reg_accuracy
+
+Output:
+Logistic Regression Accuracy: 0.92
+Logistic Regression Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.96      0.92        51
+           1       0.96      0.88      0.92        57
+
+    accuracy                           0.92       108
+   macro avg       0.92      0.92      0.92       108
+
+
