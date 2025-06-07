@@ -1,0 +1,33 @@
+Each model was evaluated using:
+
+Accuracy Score: Overall correctness of the predictions.
+
+Confusion Matrix: Visualization of prediction breakdown, TP, FP, TN, FN.
+
+Classification Report:
+
+Precision: Accuracy of positive predictions.
+Recall: Coverage of actual positives.
+F1-Score: Harmonic mean of precision and recall.
+Support: Number of actual instances for each class.
+
+Code snippet:
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
+
+def evaluate_model(model, X_test, y_test, model_name):
+    y_pred = model.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    class_report = classification_report(y_test, y_pred)
+
+    print(f'{model_name} Accuracy: {accuracy:.2f}')
+    print(f'{model_name} Classification Report:\n{class_report}')
+
+    labels = model.classes_ if hasattr(model, 'classes_') else sorted(list(set(y_test)))
+    disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=labels)
+    disp.plot(cmap='Purples')
+    plt.title(f'{model_name} Confusion Matrix')
+    plt.show()
+
+    return accuracy
